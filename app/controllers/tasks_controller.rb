@@ -16,7 +16,7 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @task = Task.find_by({ "id" => params["id"] })
+    @task = Task.find_by({ "id" => params["id"], "user_id" => sessiom["user_id"]})
     @task.destroy
     redirect_to "/tasks"
   end
