@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   end
 
   def new
+    #render :template for new users
   end
 
   def create
